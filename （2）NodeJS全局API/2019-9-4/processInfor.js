@@ -6,7 +6,7 @@
  * process.argv[1]表示当前执行脚本文件所在的路径
  * process.argv[2]表示传入的命令行参数
  * process.cwd()当前文件工作目录
- * process.exit()表示当前进程退出
+ * process.exit(id)表示当前进程退出
  */
 console.log(process.pid);
 console.log(process.platform);

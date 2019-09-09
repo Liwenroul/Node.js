@@ -1,31 +1,16 @@
-var i=0;
 
-process.stdin.on("data",function(data){
-    if(i==0){
-        console.log("name:");
-        var m1=data.toString();
+var obj={};
+var message=["Name","Email","QQ","Mobile"];
+var i=1;
+
+console.log(message[0]+":");
+process.stdin.on("data",function(data){//事件 process.stdin.on()一直输入一直获取
+    obj[message[i-1]]=data.toString("utf8");
+    if(i==4){
+        console.log(obj);
+        process.exit();
     }
-    else if(i==1){
-        console.log("email:");
-        var m2=data.toString();
+    else{
+        console.log(message[i++]+":");
     }
-    else if(i==2){
-        console.log("qq:");
-        var m3=data.toString();
-    }
-    else if(i==3){
-        console.log("mobile:");
-        var m4=data.toString();
-    }
-    else if(i==4){
-        var user={
-            name:m1,
-            email:m2,
-            qq:m3,
-            mobile:m4
-        }
-        console.log(user);
-        process.exit(process.pid);
-    }
-    i++;
 })

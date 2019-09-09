@@ -7,7 +7,7 @@ var server=new http.Server();
 //server监听客户端的请求
 server.on("request",function(req,res){
     //res.end("hello world");
-    res.write(200,{"Content-Type":"text/html"});//(200为状态码，对象)
+    res.write(200,{"Content-Type":"text/html"});//(200为状态码，对象（读取为HTML文件）)
     res.write("<h1>hello world<h1>");//可以识别响应的HTML标记
     res.end();//响应的结束(若没有，响应没结束)
 })
