@@ -1,10 +1,12 @@
+var c={};
 function circumference(r){
-    console.log(2*r*Math.PI);
+    return 2*r*Math.PI;
 }
 function area(r){
-    console.log(r*r*Math.PI);
+    return r*r*Math.PI;
 }
+c.circumference=circumference(2);
+c.area=area(2);
 module.exports={
-    circumference:circumference,
-    area:area
+    c:c
 }
