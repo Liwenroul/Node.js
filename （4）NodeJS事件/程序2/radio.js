@@ -7,7 +7,7 @@ function Radio(name,raste){
     this.name=name;
     this.raste=raste;
 }
-util.inherits(Radio,EventEmitter);
+util.inherits(Radio,EventEmitter);//继承，util.inherits(子构造函数,父构造函数);
 Radio.prototype.play=function(){
     console.log(this.name+" "+this.raste+" "+"opened");
 }
@@ -18,9 +18,6 @@ Radio.prototype.stop=function(){
 module.exports={
     Radio:Radio,
 }
-// var radio=new Radio(process.argv[2],process.argv[3]);
-// radio.play();
-// setTimeout(function(){
-//     console.log("lalala");
-//     radio.stop();
-// }, 2000);
+
+
+
